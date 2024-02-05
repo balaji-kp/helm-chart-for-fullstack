@@ -45,7 +45,8 @@ service:
   port: 8080
 
 env:
-    fronendEndpoint: 'http://localhost:3000'
+    fronendEndpoint: 
+    backend_url:
 
 ingress:
   enabled: false
