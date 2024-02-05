@@ -45,8 +45,8 @@ service:
   port: 8080
 
 env:
-    fronendEndpoint: 
-    backend_url:
+    fronendEndpoint: react-nginx-svc
+    backend_url: springboot-crud-svc
 
 ingress:
   enabled: false
