@@ -123,9 +123,9 @@ spec:
     spec:
       containers:
         - name: react-nginx-frontend
-          image: {{ .Values.image.repository }}
+          image: react-nginx-frontend
           ports:
-            - containerPort: {{ .Values.image.port }}
+            - containerPort: 80
           env:   # Setting Enviornmental Variables
             - name: DB_URL   # Setting Database host address from configMap
               value: mysql
