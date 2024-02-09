@@ -24,7 +24,7 @@ spec:
     - protocol: "TCP"
       port: 80 # The port that the service is running on in the cluster
       targetPort: 80 # The port exposed by the service
-      nodePort: 31313
+      nodePort: 31311
   type: NodePort # type of the service.
 ---
 # Define a 'Service' To Expose mysql to Other Services
