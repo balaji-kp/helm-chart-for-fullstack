@@ -52,6 +52,11 @@ spec:
           ports:
             - containerPort: 3306
               name: mysql
+          resources:
+            limits:
+              cpu: 100m
+            requests:
+              cpu: 100m
           volumeMounts:        # Mounting voulume obtained from Persistent Volume Claim
             - name: mysql-persistent-storage
               mountPath: /var/lib/minisql #This is the path in the container on which the mounting will take place.
@@ -80,6 +85,11 @@ spec:
           image: 01112021/react-springboot-mysql-stack
           ports:
             - containerPort: 8080
+          resources:
+            limits:
+              cpu: 100m
+            requests:
+              cpu: 100m
           env:   # Setting Enviornmental Variables
             - name: DB_URL   # Setting Database host address from configMap
               value: mysql
@@ -112,4 +122,9 @@ spec:
           image: 01112021/react-frontend:nginx-13.235.31.106-8080
           ports:
             - containerPort: 80
+          resources:
+            limits:
+              cpu: 100m
+            requests:
+              cpu: 100m
 
