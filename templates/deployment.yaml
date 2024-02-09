@@ -110,5 +110,6 @@ spec:
       containers:
         - name: react-nginx-frontend
           image: 01112021/react-frontend:nginx-13.235.31.106-8080
-          ports: 80
+          ports:
+            - containerPort: 80
 
