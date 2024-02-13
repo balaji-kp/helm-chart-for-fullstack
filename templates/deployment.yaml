@@ -48,8 +48,13 @@ spec:
                 SecretKeyRef:
                   name: mysecret
                   key: password
+            #- name: MYSQL_ROOT_PASSWORD
+             # value: password
             - name: MYSQL_ROOT_PASSWORD
-              value: password
+              valueFrom:
+                SecretKeyRef:
+                  name: mysecret
+                  key: password  
             - name: MYSQL_DATABASE # Setting Database Name from a 'ConfigMap'
               value: fullstack
           ports:
